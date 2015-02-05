@@ -12,7 +12,7 @@ int main ()
     cout << "Now enter the upper bound." << endl;
     cin >> b;
     if (a>b){
-      cout << "Error: Give the bounds in the correct order." << endl;
+      cout << "Error: Please enter the bounds in the correct order." << endl;
       }
   }
   while (a>b);
