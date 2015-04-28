@@ -6,6 +6,7 @@ using namespace std;
 
 void check_banana (string filename){
   string line;
+  string banana = "banana";
   int count = 0;
 
   ifstream myfile;
@@ -13,13 +14,15 @@ void check_banana (string filename){
   if (myfile.good() == true){
     while (getline (myfile, line)){
       transform(line.begin(),line.end(),line.begin(), ::tolower);
-      if (line == "banana"){
+      if (line.find (banana) != string::npos){
         count ++;
       }
     }
     cout << "Number of times the word 'Banana' appears in the file: " << count << endl;
   }
 }
+
+
 
 int main (){
   string name;
